@@ -90,7 +90,21 @@ Xでバズりそうなタイトルを1個作ってください。
             st.write(title)
 
             st.subheader("📝 AIまとめ")
-            st.write(answer)
+
+            st.markdown(
+                f"""
+                <div style="
+                    background-color: #1e1e1e;
+                    padding: 20px;
+                    border-radius: 15px;
+                    border: 1px solid #333;
+                    margin-bottom: 20px;
+                ">
+                    {answer}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
             st.code(answer)
 
@@ -137,7 +151,20 @@ for item in st.session_state.history:
 
         st.write(f"モード：{item['mode']}")
 
-        st.write(item["summary"])
+        st.markdown(
+            f"""
+            <div style="
+                background-color: #1e1e1e;
+                padding: 20px;
+                border-radius: 15px;
+                border: 1px solid #333;
+                margin-bottom: 20px;
+            ">
+                {item["summary"]}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
         st.caption(f"文字数：{item['count']}")
 

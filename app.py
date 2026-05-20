@@ -7,7 +7,7 @@ import os
 st.set_page_config(
     page_title="XまとめAI",
     page_icon="🧠",
-    layout="centered"
+    layout="wide"
 )
 
 load_dotenv()

@@ -33,7 +33,7 @@ with st.sidebar:
 
 texts = st.text_area("X投稿を複数入力（改行OK）")
 
-if st.button("要約する"):
+if st.button("🚀 要約する", use_container_width=True):
 
     if texts.strip() == "":
         st.warning("X投稿を入力してください")

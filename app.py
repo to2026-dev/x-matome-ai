@@ -4,6 +4,12 @@ import pandas as pd
 from dotenv import load_dotenv
 import os
 
+st.set_page_config(
+    page_title="XまとめAI",
+    page_icon="🧠",
+    layout="centered"
+)
+
 load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
